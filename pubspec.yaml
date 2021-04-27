@@ -28,9 +28,13 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  # Introduction Screens dependancy
   introduction_screen: ^2.1.0
+  # Launcher Icon dependancy
   flutter_launcher_icons: ^0.8.1
-
+  # Firebase Authentication Dependancy
+  firebase_auth: ^0.20.1
+  firebase_core : ^0.7.0
 
 flutter_icons:
   image_path: "assets/images/nurulogo.png"

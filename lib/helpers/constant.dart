@@ -65,3 +65,42 @@ List<PageViewModel> screens = [
     decoration: pageDecoration,
   ),
 ];
+
+// //App Bar Widget
+// Widget appBarMain(BuildContext buildContext){
+//   return AppBar(
+//     title: Text("Nuru"),
+//   );
+// }
+
+//Input Decoration
+InputDecoration textFieldInputDecoration(String hintText){
+  return InputDecoration(
+      hintText: hintText,
+      hintStyle: TextStyle(
+        color: Colors.white54,
+      ),
+      focusedBorder: UnderlineInputBorder(
+        borderSide: BorderSide(color: Colors.white),
+      ),
+      enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: Colors.white)
+      )
+  );
+
+}
+
+//Text Styles
+TextStyle simpleTextStyle(){
+  return TextStyle(
+      color: Colors.white,
+      fontSize: 16
+  );
+}
+
+TextStyle mediumTextStyle(){
+  return TextStyle(
+      color: Colors.white,
+      fontSize: 17
+  );
+}
