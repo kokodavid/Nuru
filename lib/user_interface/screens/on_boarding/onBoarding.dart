@@ -1,7 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:nuru/widgets/constant_widgets.dart';
+import 'package:nuru/helpers/authenticate.dart';
+import 'package:nuru/helpers/constant.dart';
 
 
 class OnBoardingScreen extends StatelessWidget {
@@ -13,7 +14,11 @@ class OnBoardingScreen extends StatelessWidget {
       body: IntroductionScreen(
         pages: screens,
         //Done Button Functionality
-        onDone: (){},
+        onDone: (){
+          Navigator.pushReplacement(context, MaterialPageRoute(
+              builder: (context) => Authenticate()
+          ));
+        },
         //Display Skip Button
         showSkipButton: true,
         skipFlex: 0,

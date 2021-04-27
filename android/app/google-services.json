@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "856006182360",
+    "project_id": "nuru-7b6e6",
+    "storage_bucket": "nuru-7b6e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:856006182360:android:47fa5f539cd3d915531ead",
+        "android_client_info": {
+          "package_name": "com.develpment.nuru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "856006182360-0cg5g7omnadfpihf7c4aejpttktnvji6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnXbM95BZdy0N_4in27zJXDlyv9V2Wf6o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "856006182360-0cg5g7omnadfpihf7c4aejpttktnvji6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
