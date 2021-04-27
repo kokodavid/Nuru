@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:856006182360:android:5a5895f66c16057b531ead",
+        "mobilesdk_app_id": "1:856006182360:android:47fa5f539cd3d915531ead",
         "android_client_info": {
-          "package_name": "com.development.nuru"
+          "package_name": "com.develpment.nuru"
         }
       },
       "oauth_client": [
