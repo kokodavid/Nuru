@@ -1,4 +1,4 @@
-# blog
+# Nuru
 
 Nuru Reports
 
