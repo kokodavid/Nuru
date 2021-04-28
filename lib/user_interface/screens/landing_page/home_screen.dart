@@ -66,15 +66,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(height: 30.h,),
-              Align(
-                alignment: Alignment.center,
-                child: Center(
-                    child: Column(
-                      children: [
-                        Image.asset("assets/images/not_found.png"),
-                        Text("Posts Not Found")
-                      ],
-                    )
+              Center(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset("assets/images/not_found.png"),
+                          Text("Posts Not Found",style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),)
+                        ],
+                      )
+                  ),
                 ),
               )
             ],

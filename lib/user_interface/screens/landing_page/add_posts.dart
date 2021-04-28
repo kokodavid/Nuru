@@ -47,7 +47,7 @@ class _AddPostsScreenState extends State<AddPostsScreen> {
                     children: [
                       GestureDetector(
                         onTap: (){
-                          Navigator.pop(context);
+                          // Navigator.pop(context);
                         },
                         child: Text(
                           "Close",
