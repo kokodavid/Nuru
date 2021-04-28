@@ -10,6 +10,7 @@ Nuru Reports
 </p>
 <p float="left">
   <img src="assets/screenshots/login.png" width="250" />
+  <img src="assets/screenshots/register.png" width="250" />
   <img src="assets/screenshots/homescreen.png" width="250" />
 </p>
 
