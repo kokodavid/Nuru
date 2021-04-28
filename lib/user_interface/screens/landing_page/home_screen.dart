@@ -15,6 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    FlutterStatusbarcolor.setStatusBarColor(Color(0xFFF6B21A));
     return Scaffold(
       body: SafeArea(
         child: Container(
