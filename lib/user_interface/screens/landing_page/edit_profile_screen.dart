@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:nuru/helpers/constant.dart';
 import 'package:nuru/helpers/locator.dart';
+import 'package:nuru/helpers/profile.db.dart';
 import 'package:nuru/helpers/storage_repo.dart';
 import 'package:nuru/helpers/user_controller.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
@@ -39,6 +40,8 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
     });
   }
 
+
+
   // void getUserProfile()async{
   //   final uid = FirebaseAuth.instance.currentUser.uid;
   //   UserProfile userProfile = (await locator.get<UserController>().loadUserProfile(uid));
@@ -53,7 +56,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   @override
   void initState() {
     getUpdatedAvatarUrl();
-    // getUserProfile();
+    getProfile();
     super.initState();
   }
 

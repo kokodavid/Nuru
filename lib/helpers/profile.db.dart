@@ -1,8 +1,15 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
+
 final database = db();
 const profileTables = 'profiles';
+// database table and column names
+ final columnId = 'id';
+ final columnFirstName = 'firstName';
+ final columnLastName = 'lastName';
+ final columnEmail = 'email';
+ final columnPhone = 'phone';
 
 Future<Database> db() async {
   return openDatabase(
@@ -44,6 +51,18 @@ Future<void> updateProfile(Profile profile) async {
     // Pass the Profile's id as a whereArg to prevent SQL injection.
     whereArgs: [profile.id],
   );
+}
+
+Future<List<Map<dynamic, dynamic>>> getProfile()async{
+  final db = await database;
+
+  List<Map> result = await db.rawQuery('SELECT * FROM profiles WHERE id=?', [1]);
+
+  // print the results
+  result.forEach((row) => print(row));
+  return result;
+
+
 }
 
 Future<void> deleteProfile(int id) async {

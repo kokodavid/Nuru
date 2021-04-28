@@ -8,6 +8,14 @@ class AddPostsScreen extends StatefulWidget {
 class _AddPostsScreenState extends State<AddPostsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      child: Scaffold(
+        body:Container(
+          child: Container(
+
+          ),
+        )
+      ),
+    );
   }
 }
