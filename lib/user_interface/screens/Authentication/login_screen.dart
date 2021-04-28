@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:nuru/helpers/auth_repo.dart';
+import 'package:nuru/repository/auth_repo.dart';
 import 'package:nuru/helpers/constant.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nuru/helpers/locator.dart';

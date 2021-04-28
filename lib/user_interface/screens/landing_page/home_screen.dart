@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 import 'package:nuru/helpers/constant.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nuru/helpers/form_input_decoration.dart';
+import 'package:nuru/user_interface/widgets/form_input_decoration.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -15,6 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    FlutterStatusbarcolor.setStatusBarColor(Color(0xFFF6B21A));
     return Scaffold(
       body: SafeArea(
         child: Container(
@@ -65,10 +66,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               SizedBox(height: 30.h,),
-              Align(
-                alignment: Alignment.center,
-                child: Center(
-                    child: Image.asset("assets/images/not_found.png")
+              Center(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Center(
+                      child: Column(
+                        children: [
+                          Image.asset("assets/images/not_found.png"),
+                          Text("Posts Not Found",style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold),)
+                        ],
+                      )
+                  ),
                 ),
               )
             ],

@@ -29,11 +29,6 @@ class UserModel extends Equatable {
     avatarUrl,
   ];
 
-// UserModel.fromMap(Map<String, dynamic> mapData) {
-//   this.uid = mapData["uid"];
-//   this.username = mapData["username"];
-//   this.email = mapData["email"];
-//   this.avatarUrl = mapData['avatar'];
-// }
+
 
 }

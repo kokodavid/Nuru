@@ -1,14 +1,18 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:nuru/repository/storage_repo.dart';
 import 'package:nuru/models/user_model.dart';
 import 'package:nuru/models/user_profile.dart';
 
-import 'auth_repo.dart';
+import '../repository/auth_repo.dart';
 import 'locator.dart';
 
 class UserController{
   UserModel? _currentUser;
   AuthRepo _authRepo = locator.get<AuthRepo>();
+  StorageRepo _storageRepo = locator.get<StorageRepo>();
   final FirebaseAuth _auth = FirebaseAuth.instance;
   UserProfile userProfile = UserProfile(lastName: '', firstName: '', phone: '', email: '');
   final userProfileRef = FirebaseFirestore.instance.collection("userProfile");
@@ -90,5 +94,29 @@ class UserController{
     }
   }
 
+
+  Future<void> uploadProfilePicture(File image) async {
+    print("before | ${_auth.currentUser.photoURL}");
+
+    _auth.currentUser.updateProfile(photoURL: await locator.get<StorageRepo>().uploadFile(image));
+
+    print("after | ${_auth.currentUser.photoURL}");
+  }
+
+  Future<String> getDownloadUrl() async {
+    return await _storageRepo.getUserProfileImage(currentUser!.uid);
+  }
+
+
+  Future<UserProfile> loadUserProfile(String uid) async {
+    final userProfileRef = FirebaseFirestore.instance.collection("userProfile");
+    try {
+      final userProfile = await userProfileRef.doc(uid).get().then((value) => UserProfile.fromJson(value.data()));
+      return userProfile;
+    } catch (_) {
+      print("load profile error | $_");
+      return userProfile;
+    }
+  }
 
 }

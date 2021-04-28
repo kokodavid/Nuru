@@ -2,13 +2,15 @@ import 'package:country_list_pick/country_list_pick.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:nuru/helpers/auth_repo.dart';
+import 'package:nuru/repository/auth_repo.dart';
 import 'package:nuru/helpers/authenticate.dart';
 import 'package:nuru/helpers/constant.dart';
 import 'package:nuru/helpers/locator.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nuru/databases/profile.db.dart';
 import 'package:nuru/helpers/user_controller.dart';
 import 'package:nuru/user_interface/screens/landing_page/home_screen.dart';
+import 'package:sqflite/sqflite.dart';
 
 
 class RegisterScreen extends StatefulWidget {
@@ -24,6 +26,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   FirebaseAuth auth = FirebaseAuth.instance;
   late User _currentUser;
   AuthRepo authMethods = AuthRepo();
+
+
   final formKey = GlobalKey<FormState>();
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   AuthRepo _authRepo = locator.get<AuthRepo>();
@@ -36,6 +40,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
   bool _isLoading = false;
   String? countryCode;
 
+
+  
   @override
   Widget build(BuildContext context) {
     Widget loadingIndicator = _isLoading
@@ -290,14 +296,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
     );
 
 
-    // if (!auth.currentUser.emailVerified) {
-    //   _showErrorSnack("An email has just been sent to you, Click the link provided to complete registration");
-    //   setState(() {
-    //     _isLoading = false;
-    //   });
-    // } else if (auth.currentUser.emailVerified == true) {
     if (logMessage == "Registered Successfully") {
-      String phoneNumber = "$countryCode + ${phoneTextEditingController.text}";
+
+      //Creating a Profile In Firebase
+      String phoneNumber = phoneTextEditingController.text;
       print(phoneNumber);
       await locator.get<UserController>().uploadProfile(
         lastName: lastNameTextEditingController.text,
@@ -306,6 +308,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
         email: emailTextEditingController.text,
 
       );
+
+      //Creating profile on Local Storage
+      insertDataToDB();
+
+
       Navigator.pushReplacement(context, MaterialPageRoute(
           builder: (context) => Authenticate()
       ));
@@ -335,6 +342,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
   //   }
   // }
 
+  //Getting Id  From Local Database
+  insertDataToDB()async{
+    Profile profile = Profile(
+        lastName: lastNameTextEditingController.text,
+        firstName: firstNameTextEditingController.text,
+        phone: phoneTextEditingController.text,
+        email: emailTextEditingController.text
+    );
+    await insertProfile(profile);
+  }
 
   _showErrorSnack(String message) {
     final snackbar = SnackBar(
