@@ -2,6 +2,17 @@
 
 Nuru Reports
 
+## SCREENSHOTS
+<p float="left">
+  <img src="https://drive.google.com/file/d/1rlGoH7xR2ZRxlPb-55fxDo9xNtx8wqMf/view?usp=sharing" width="250" />
+  <img src="https://drive.google.com/file/d/1riviwVCA0UrRM0dVILOejgumouKwMwtx/view?usp=sharing" />
+    <img src="https://drive.google.com/file/d/1rkWanUiUum0NWmT3y13BlnWqcWjXIxwu/view?usp=sharing" width="250" />
+</p>
+<p float="left">
+  <img src="https://drive.google.com/file/d/1rhxB_M8zTiEMGrH6rjDQ_8rly9dnP4k7/view?usp=sharing" width="250" />
+  <img src="https://drive.google.com/file/d/1reCle_KY2f_ufur37UZLnST2iSXmdgoC/view?usp=sharing" width="250" />
+</p>
+
 
 
 ## Tools and packages used
