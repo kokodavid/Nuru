@@ -1,4 +1,4 @@
-# Nuru
+# Nuru Reports
 
 Nuru Reports
 
