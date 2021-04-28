@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nuru/helpers/constant.dart';
-import 'package:nuru/user_interface/screens/landing_page/account_screen.dart';
+import 'package:nuru/user_interface/screens/profile/account_screen.dart';
 import 'package:nuru/user_interface/screens/landing_page/add_posts.dart';
 import 'package:nuru/user_interface/screens/landing_page/home_screen.dart';
 

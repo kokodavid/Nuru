@@ -4,7 +4,7 @@ import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:nuru/models/user_model.dart';
 
 import 'auth_repo.dart';
-import 'locator.dart';
+import '../helpers/locator.dart';
 
 
 class StorageRepo {

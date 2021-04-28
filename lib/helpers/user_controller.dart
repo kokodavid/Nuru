@@ -2,11 +2,11 @@ import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:nuru/helpers/storage_repo.dart';
+import 'package:nuru/repository/storage_repo.dart';
 import 'package:nuru/models/user_model.dart';
 import 'package:nuru/models/user_profile.dart';
 
-import 'auth_repo.dart';
+import '../repository/auth_repo.dart';
 import 'locator.dart';
 
 class UserController{

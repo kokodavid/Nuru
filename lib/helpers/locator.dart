@@ -1,9 +1,9 @@
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:get_it/get_it.dart';
-import 'package:nuru/helpers/storage_repo.dart';
+import 'package:nuru/repository/storage_repo.dart';
 import 'package:nuru/helpers/user_controller.dart';
 
-import 'auth_repo.dart';
+import '../repository/auth_repo.dart';
 
 
 

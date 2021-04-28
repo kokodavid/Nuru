@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nuru/helpers/constant.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nuru/user_interface/screens/landing_page/edit_profile_screen.dart';
-import 'package:nuru/user_interface/screens/landing_page/menu_items.dart';
+import 'package:nuru/user_interface/screens/profile/edit_profile_screen.dart';
+import 'package:nuru/user_interface/screens/profile/menu_items.dart';
 
 
 class AccountScreen extends StatefulWidget {

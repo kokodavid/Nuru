@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 import 'package:nuru/helpers/constant.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nuru/helpers/form_input_decoration.dart';
+import 'package:nuru/user_interface/widgets/form_input_decoration.dart';
 
 
 class HomeScreen extends StatefulWidget {
@@ -69,7 +69,12 @@ class _HomeScreenState extends State<HomeScreen> {
               Align(
                 alignment: Alignment.center,
                 child: Center(
-                    child: Image.asset("assets/images/not_found.png")
+                    child: Column(
+                      children: [
+                        Image.asset("assets/images/not_found.png"),
+                        Text("Posts Not Found")
+                      ],
+                    )
                 ),
               )
             ],

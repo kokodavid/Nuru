@@ -46,23 +46,23 @@ const dotsContainerDecorator = const ShapeDecoration(
 //Introduction Screens
 List<PageViewModel> screens = [
   PageViewModel(
-    title: "Collect Data",
+    title: "Data Collection",
     body:
-    "Instead of having to buy an entire share, invest any amount you want.",
+    "Nuru App Allows Data Collection in Digital Formats",
     image: buildImage('illustration_one.png'),
     decoration: pageDecoration,
   ),
   PageViewModel(
     title: "Data Analysis",
     body:
-    "Instead of having to buy an entire share, invest any amount you want.",
+    "All Data received at Nuru is Analysed and categorically classified",
     image: buildImage('illustration_two.png'),
     decoration: pageDecoration,
   ),
   PageViewModel(
-    title: "Reports Submission",
+    title: "Reports Development",
     body:
-    "Instead of having to buy an entire share, invest any amount you want.",
+    "Data Collection and Analysis play big roles in the Development of Quality Reports",
     image: buildImage('illustration_three.png'),
     decoration: pageDecoration,
   ),
