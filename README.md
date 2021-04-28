@@ -6,7 +6,7 @@ Nuru Reports
 <p float="left">
     <img src="assets/screenshots/splash_screen.png" width="250" />
   <img src="assets/screenshots/slide_one.png" width="250" />
-  <img src="assets/screenshots/slide_two.png" />
+  <img src="assets/screenshots/slide_two.png" width="250/>
 </p>
 <p float="left">
   <img src="assets/screenshots/login.png" width="250" />
